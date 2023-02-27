@@ -26,6 +26,10 @@ if($_GET['action']){
             echo "page par défaut";
         }
     }
+
 }else{
-    echo "aucune action n'existe, vous devez me rediriger vers une page par défaut, page d'accueil par exemple";
+    /* echo "aucune action n'existe, vous devez me rediriger vers une page par défaut, page d'accueil par exemple"; */
+
+    require_once('views/viewCourse.php');
+    
 }

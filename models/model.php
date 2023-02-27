@@ -19,6 +19,6 @@ function connexionBDD(){
 }
 
 connexionBDD();
-if(connexionBDD()){
+/* if(connexionBDD()){
     echo "connexion ok";
-}
+} */
