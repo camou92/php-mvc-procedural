@@ -14,3 +14,21 @@ function addOneCourse(){
 
     require_once('views/viewCourse.php');
 }
+
+function getAllCourses(){
+    $resultGetCourses = getCourses();
+
+    if(!$resultGetCourses){
+        $message = "La récupération des cours n'a pas abouti !";
+    } else{
+        $nb_courses = $resultGetCourses->rowCount();
+        if($nb_courses == 0){
+            $message = "Il n'y a aucun cours pour le moment !";
+            addOneCourse();
+        }else{
+            require_once('views/viewAllCourses.php');
+        }
+    }
+
+    $resultGetCourses->closeCursor();
+}

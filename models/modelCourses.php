@@ -13,3 +13,10 @@ function addCourse($courseCode, $courseTitle, $courseLangage){
     $result = $requete->execute();
     return $result;
 }
+
+function getCourses(){
+    $bddPDO = connexionBDD();
+    $requete = "SELECT * FROM courses ORDER BY courseId ASC";
+    $resultGEtCourses =  $bddPDO->query($requete);
+    return $resultGEtCourses;
+}
